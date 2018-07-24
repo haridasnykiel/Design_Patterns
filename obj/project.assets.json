@@ -681,30 +681,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Haridas.Nykiel\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/Hari/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C# Design Patterns\\C# Design Patterns.csproj",
+      "projectUniqueName": "/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/C# Design Patterns.csproj",
       "projectName": "C# Design Patterns",
-      "projectPath": "C:\\C# Design Patterns\\C# Design Patterns.csproj",
-      "packagesPath": "C:\\Users\\Haridas.Nykiel\\.nuget\\packages\\",
-      "outputPath": "C:\\C# Design Patterns\\obj\\",
+      "projectPath": "/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/C# Design Patterns.csproj",
+      "packagesPath": "/Users/Hari/.nuget/packages/",
+      "outputPath": "/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Haridas.Nykiel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/Hari/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\NugetOutput": {},
-        "http://nuget.harrogate.jet2.com/api/v2/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
