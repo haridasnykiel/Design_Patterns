@@ -4,31 +4,26 @@ namespace C__Design_Patterns
     public class Singleton //User can only create one instance of the class. Static can be used if the instance is not required. If instance is required then the 
         //class can only be instantiated once.
     {
-        //private static readonly object mutex = new object(); // This is to ensure that 2 instances of the singleton class cannot be created even 
-        //when there are multiple threads 
-        private static readonly Singleton instance = new Singleton(); // The way that static intialisers work in dotnet is that only one thread is allowed to access the 
-        //initialser at a time.
+       private static class Holder // with this nested class Singleton no longer has anything to initialise 
+       // so the if the static methods are called no initialisation will occur and the method will just be run.
+       // Only when the instance prop is called that the class will initialised.
+       {
+            internal static readonly Singleton instance = new Singleton(); // The way that static intialisers work in dotnet is that only one thread is allowed to access the 
+            //initialser at a time. So now it will allows initialise the type before it is first used. Even if a method is called before the instance is initialised.
+            static Holder() {} //Empty static constructor - Will initialise this type when it is called. if you do not care when the type gets initialised then do not bother with a static constructure at all.
+       }
+        
         private Singleton()
         { 
+            Console.WriteLine("Constructor"); 
         }
 
-        public static Singleton Instance {get {return instance; } }
-        // {
-        //     get 
-        //     {
-        //         if(instance == null) // To ensure the lock is not activated if there is already an instance of the object.
-        //         {
-        //             lock (mutex) // If the another instance comes in and there is already an instance inside creating the instance then this will have to wait.
-        //             {
-        //                 if(instance == null) // If the second instance comes in before the instance is created then this will stop another instance from being created. 
-        //                 {
-        //                     instance = new Singleton(); // 
-        //                 }
-        //             }
-        //         }
-        //         return instance;
-        //     }
-        // }
+        public static Singleton Instance {get {return Holder.instance; } }
+
+        public static void SaySomething(string text) 
+        {
+            Console.WriteLine(text);
+        }
 
         public void DoSomething() 
         {

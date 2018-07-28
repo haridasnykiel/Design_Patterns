@@ -10,7 +10,7 @@ namespace C__Design_Patterns
         // static void Main(string[] args)
         // {
         //     //Singleton singleton = new Singleton();
-        //     Console.WriteLine("Start Here"); // dotnet 4 
+        //     Console.WriteLine("Start Here"); 
         //     Singleton instance1 = Singleton.Instance;
         //     Singleton instance2 = Singleton.Instance;
         //     instance1.DoSomething();
@@ -18,14 +18,7 @@ namespace C__Design_Patterns
             
             
         // }
-        [Fact]
-        public void Test1() 
-        {
-            Singleton instance1 = Singleton.Instance;
-            Singleton instance2 = Singleton.Instance;
-            Assert.Equal(instance1, instance2);
-            instance1.DoSomething();
-        }
+        
     }
 
 
