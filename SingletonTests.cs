@@ -5,6 +5,7 @@ namespace C__Design_Patterns
 {
     public class Tests
     {
+
         [Fact]
         public void Test1() 
         {

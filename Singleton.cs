@@ -9,11 +9,11 @@ namespace C__Design_Patterns
        // Only when the instance prop is called that the class will initialised.
        {
             internal static readonly Singleton instance = new Singleton(); // The way that static intialisers work in dotnet is that only one thread is allowed to access the 
-            //initialser at a time. So now it will allows initialise the type before it is first used. Even if a method is called before the instance is initialised.
+            //initialser at a time. So now it will initialise the type before it is first used. Even if a method is called before the instance is initialised.
             static Holder() {} //Empty static constructor - Will initialise this type when it is called. if you do not care when the type gets initialised then do not bother with a static constructure at all.
        }
         
-        private Singleton()
+        private Singleton() 
         { 
             Console.WriteLine("Constructor"); 
         }
