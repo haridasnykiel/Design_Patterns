@@ -5,8 +5,8 @@ namespace C__Design_Patterns
         //class can only be instantiated once.
     {
        private static class Holder // with this nested class Singleton no longer has anything to initialise 
-       // so the if the static methods are called no initialisation will occur and the method will just be run.
-       // Only when the instance prop is called that the class will initialised.
+       // so if the static methods are called no initialisation will occur and the method will just be run.
+       // Only when the instance prop is called that the class will be initialised.
        {
             internal static readonly Singleton instance = new Singleton(); // The way that static intialisers work in dotnet is that only one thread is allowed to access the 
             //initialser at a time. So now it will initialise the type before it is first used. Even if a method is called before the instance is initialised.

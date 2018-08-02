@@ -18,5 +18,14 @@ namespace C__Design_Patterns
            Licence licence = new Licence(new DateTime(2020, 03, 21));
            Assert.True(!licence.HasExpired);
         }
+
+        [Fact]
+        public void InstantClassTest1() 
+        {
+           Instant time = new Instant();
+            Console.WriteLine("Hellshauidfoha");
+           Console.WriteLine(time.ReturnDateTime() + " !!!!!!!!!");
+           Assert.NotNull(time.ReturnDateTime());
+        }
     }
 }
