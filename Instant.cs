@@ -1,22 +1,22 @@
 using System;
 namespace C__Design_Patterns 
 {
-    class Instant 
-    { 
-
-        public DateTime ReturnDateTime(int years, int months, int days, int hours, int mins, int secs) 
-        {
-            var datetime = new DateTime(years, months, days, hours, mins, secs);
-            return datetime;
-        }
-    }
 
     class FakeClock : IClock
     {
-        Instant _instant;
-        public FakeClock()
+        public DateTime Now() 
         {
-            
+            var datetime = new DateTime(2010, 3, 2, 14, 32, 22);
+            return datetime;
         }
+        
+    }
+
+    class Clock : IClock 
+    {
+        public DateTime Now() 
+        {
+            return new DateTime();  
+        }   
     }
 }

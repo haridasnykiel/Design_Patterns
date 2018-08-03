@@ -6,14 +6,16 @@ namespace C__Design_Patterns // Date Times in dotnet give a false sense of secur
      class Licence 
      {
          private readonly DateTime expiry;
-         public Licence(DateTime expiry)
+         private readonly IClock clock;
+         public Licence(DateTime expiry, IClock clock)
          {
-             this.expiry = expiry;
+            this.expiry = expiry;
+            this.clock = clock;
          }
 
          public bool HasExpired
          {
-            get { return DateTime.UtcNow > expiry; } // UtcNow will always get the current date and time. 
+            get { return clock.Now() > expiry; } // UtcNow will always get the current date and time. 
                                                     // if you want to test the boundaries of this code then you will need to control the DateTime and have a clock that does not move.
                                                     // Or a clock that when set will not go forward unless it is set it is told too. 
          }

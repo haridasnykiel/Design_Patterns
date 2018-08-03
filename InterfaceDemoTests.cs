@@ -8,22 +8,21 @@ namespace C__Design_Patterns
         [Fact]
         public void HasExpired() 
         {
-           Licence licence = new Licence(new DateTime(2010, 03, 21)); 
+           FakeClock fakeClock = new FakeClock(); 
+           Licence licence = new Licence(fakeClock.Now().AddTicks(-1), fakeClock); 
            Assert.True(licence.HasExpired);
         }
 
         [Fact]
         public void HasNotExpired() 
         {
-           Licence licence = new Licence(new DateTime(2020, 03, 21));
+           FakeClock fakeClock = new FakeClock(); 
+           Licence licence = new Licence(fakeClock.Now().AddTicks(1), fakeClock); 
            Assert.True(!licence.HasExpired);
         }
 
-        [Fact]
-        public void InstantClassTest1() 
-        {
-           Instant time = new Instant(); 
-           Assert.NotNull(time.ReturnDateTime(2000, 2, 3, 12, 32, 33));
-        }
+    
     }
+
+    
 }
