@@ -4,11 +4,19 @@ namespace C__Design_Patterns
     class Instant 
     { 
 
-        public string ReturnDateTime() 
+        public DateTime ReturnDateTime(int years, int months, int days, int hours, int mins, int secs) 
         {
-            var datetime = new DateTime(2000, 1, 2, 14, 32, 22);
-            var value = datetime.ToShortDateString();
-            return "Value";
+            var datetime = new DateTime(years, months, days, hours, mins, secs);
+            return datetime;
+        }
+    }
+
+    class FakeClock : IClock
+    {
+        Instant _instant;
+        public FakeClock()
+        {
+            
         }
     }
 }

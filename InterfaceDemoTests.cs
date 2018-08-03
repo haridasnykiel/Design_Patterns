@@ -22,10 +22,8 @@ namespace C__Design_Patterns
         [Fact]
         public void InstantClassTest1() 
         {
-           Instant time = new Instant();
-            Console.WriteLine("Hellshauidfoha");
-           Console.WriteLine(time.ReturnDateTime() + " !!!!!!!!!");
-           Assert.NotNull(time.ReturnDateTime());
+           Instant time = new Instant(); 
+           Assert.NotNull(time.ReturnDateTime(2000, 2, 3, 12, 32, 33));
         }
     }
 }
