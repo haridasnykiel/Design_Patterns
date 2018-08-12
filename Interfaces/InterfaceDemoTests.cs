@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace C__Design_Patterns
+namespace C__Design_Patterns.Interfaces
 {
     public class InterfaceDemoTests
     {

@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace C__Design_Patterns
+namespace C__Design_Patterns.InversionOfControl.DependencyInjection
 { 
     public class OrderServiceTests
     {
@@ -22,11 +22,16 @@ namespace C__Design_Patterns
         public void OrderServiceClassTests() 
         {
             var service = new OrderService(OrderDatabase.Instance);
-
+            var service2 = new OrderService();
             Assert.True(service is OrderService);
             Assert.True(service._orderSaver is OrderDatabase);
+            Assert.True(service2 is OrderService);
+            Assert.True(service2._orderSaver is OrderDatabase);
             Console.WriteLine(service.AcceptOrder("Spoons")); // When this is run this is executed first?
+            Console.WriteLine(service.AcceptOrder("Stuff"));
         }
+
+        
         
     }
 }

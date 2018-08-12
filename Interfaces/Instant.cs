@@ -1,5 +1,5 @@
 using System;
-namespace C__Design_Patterns 
+namespace C__Design_Patterns.Interfaces
 {
 
     class FakeClock : IClock

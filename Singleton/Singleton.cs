@@ -1,5 +1,5 @@
 using System;
-namespace C__Design_Patterns
+namespace C__Design_Patterns.Singleton
 {
     public class Singleton //User can only create one instance of the class. Static can be used if the instance is not required. If instance is required then the 
         //class can only be instantiated once.
