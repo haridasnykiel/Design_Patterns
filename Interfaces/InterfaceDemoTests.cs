@@ -16,7 +16,7 @@ namespace C__Design_Patterns.Interfaces
         [Fact]
         public void HasNotExpired() 
         {
-           FakeClock fakeClock = new FakeClock(); 
+           FakeClock fakeClock = new FakeClock();
            Licence licence = new Licence(fakeClock.Now().AddTicks(1), fakeClock.Now()); 
            Assert.True(!licence.HasExpired);
         }
