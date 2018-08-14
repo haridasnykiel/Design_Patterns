@@ -16,7 +16,7 @@ namespace C__Design_Patterns.Interfaces
     {
         public DateTime Now() 
         {
-            return new DateTime();  
+            return DateTime.UtcNow;  
         }   
     }
 }
