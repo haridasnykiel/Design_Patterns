@@ -25,12 +25,12 @@ namespace C__Design_Patterns.Interfaces
         public void HasJustExpired() 
         {
            FakeClock fakeClock = new FakeClock(); 
-           var current = fakeClock.Now().AddTicks(-1);
+           var clock = fakeClock.Now().AddTicks(-1);
            var expiry = fakeClock.Now();
-           Licence licence = new Licence(expiry, current); 
+           Licence licence = new Licence(expiry, clock); 
            Assert.True(!licence.HasExpired);
-           current = fakeClock.Now().AddTicks(1);
-           //Assert.True(licence.HasExpired);
+           clock = clock.AddDays(1);
+           Assert.True(licence.HasExpired);
         }
 
     

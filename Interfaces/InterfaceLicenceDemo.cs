@@ -13,6 +13,10 @@ namespace C__Design_Patterns.Interfaces // Date Times in dotnet give a false sen
             this.clock = clock;
          }
 
+        public void ChangeClock() 
+        {
+
+        }
          public bool HasExpired
          {
             get { return clock >= expiry; } 
