@@ -29,12 +29,11 @@ namespace C__Design_Patterns.Interfaces
            var expiry = fakeClock.Now();
            Licence licence = new Licence(expiry, clock); 
            Assert.True(!licence.HasExpired);
-           clock = clock.AddDays(1);
+           licence.ChangeExpiry(fakeClock.Now().AddTicks(-1));
            Assert.True(licence.HasExpired);
         }
 
     
     }
 
-    
 }

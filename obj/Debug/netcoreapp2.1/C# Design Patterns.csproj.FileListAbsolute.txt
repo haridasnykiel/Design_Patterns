@@ -12,17 +12,3 @@
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
-C:\C# Design Patterns\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-C:\C# Design Patterns\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
-C:\C# Design Patterns\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
-C:\C# Design Patterns\bin\Debug\netcoreapp2.1\C# Design Patterns.deps.json
-C:\C# Design Patterns\bin\Debug\netcoreapp2.1\C# Design Patterns.runtimeconfig.json
-C:\C# Design Patterns\bin\Debug\netcoreapp2.1\C# Design Patterns.runtimeconfig.dev.json
-C:\C# Design Patterns\bin\Debug\netcoreapp2.1\C# Design Patterns.dll
-C:\C# Design Patterns\bin\Debug\netcoreapp2.1\C# Design Patterns.pdb
-C:\C# Design Patterns\obj\Debug\netcoreapp2.1\C# Design Patterns.csprojAssemblyReference.cache
-C:\C# Design Patterns\obj\Debug\netcoreapp2.1\C# Design Patterns.csproj.CoreCompileInputs.cache
-C:\C# Design Patterns\obj\Debug\netcoreapp2.1\C# Design Patterns.AssemblyInfoInputs.cache
-C:\C# Design Patterns\obj\Debug\netcoreapp2.1\C# Design Patterns.AssemblyInfo.cs
-C:\C# Design Patterns\obj\Debug\netcoreapp2.1\C# Design Patterns.dll
-C:\C# Design Patterns\obj\Debug\netcoreapp2.1\C# Design Patterns.pdb

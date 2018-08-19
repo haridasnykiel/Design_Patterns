@@ -5,7 +5,7 @@ namespace C__Design_Patterns.Interfaces // Date Times in dotnet give a false sen
                                 //Is the time zone the same here as itis in other parts of the world, no.
      class Licence 
      {
-         private readonly DateTime expiry;
+         private DateTime expiry;
          private readonly DateTime clock;
          public Licence(DateTime expiry, DateTime clock)
          {
@@ -13,9 +13,9 @@ namespace C__Design_Patterns.Interfaces // Date Times in dotnet give a false sen
             this.clock = clock;
          }
 
-        public void ChangeClock() 
+        public void ChangeExpiry(DateTime expiry) 
         {
-
+            this.expiry = expiry;
         }
          public bool HasExpired
          {
