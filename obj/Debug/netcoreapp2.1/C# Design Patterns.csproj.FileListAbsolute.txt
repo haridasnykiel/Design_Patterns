@@ -1,3 +1,6 @@
+/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/C# Design Patterns.deps.json
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/C# Design Patterns.runtimeconfig.json
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/C# Design Patterns.runtimeconfig.dev.json
@@ -9,6 +12,3 @@
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/obj/Debug/netcoreapp2.1/C# Design Patterns.AssemblyInfo.cs
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/obj/Debug/netcoreapp2.1/C# Design Patterns.dll
 /Users/Hari/my-workstation/work/dev/C#/Design_Patterns/obj/Debug/netcoreapp2.1/C# Design Patterns.pdb
-/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
-/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
-/Users/Hari/my-workstation/work/dev/C#/Design_Patterns/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
