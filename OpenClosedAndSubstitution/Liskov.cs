@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Design_Patterns.OpenClosedAndSubstitution
 {
@@ -22,7 +23,8 @@ namespace Design_Patterns.OpenClosedAndSubstitution
     public class Liskov
     {
         static void PrintSequence<T>(IEnumerable<T> items) // Any good implementation of IEnumerable should be 
-                                                        //able to be passed into this method and iterated on.
+                                                        //able to be passed into this method and iterated on. 
+                                                        // So this would include List, Array and so on.
         {
             if(items is IList<T>) 
             {
@@ -30,6 +32,7 @@ namespace Design_Patterns.OpenClosedAndSubstitution
                 // In this method we want to achieve the same results but it may be easier to do in List.
                 // This is the reason for this if statement.
                 // Ultimately the result should always be the same.
+            
             }
             foreach (T item in items)
             {
@@ -37,6 +40,33 @@ namespace Design_Patterns.OpenClosedAndSubstitution
             }
 
             // The C# compiler will enforce this principle.
+        }
+
+
+        public void ReportSpy(Spy spy) 
+        {
+            var name = spy.Name; //The requirements say that this should not be valid.
+            Person spyAsPerson = spy;
+            var spayName = spyAsPerson.Name; //Even if the name property was hidden in the spy class.
+                                            //The type can be converted to a Person and then the name prop would available. 
         } 
+
+
+        public void LeakyAbstraction(Stream stream) 
+        {
+            if(stream.CanSeek) 
+            {
+                stream.Position = 0; // Here we are saying that if a stream can support seeking then go back to the beginning of it.
+                //So not all classes that inherit stream can seek. So this is a porp that is not used by all streams. (LeakyAbstraction)
+                
+            }
+        }
+
+        public void ArraysBreakLiskov() 
+        {
+            IList<string> strings = new string[5]; //arrays are fixed size in C#
+            strings.Add("Hello"); //So this will fail. As Arrays are fixed size and a list are not fixed and can be added to.
+            //In terms of Listov this type is broken. 
+        }
     }
 }

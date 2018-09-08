@@ -41,7 +41,7 @@ namespace Design_Patterns.TypeMeaningSingleResponsibility
            Assert.NotEqual(utcTime1, utcTime2);
 
            var localDateTime1 = utcTime1.ToLocalTime();
-           var localDateTime2 = utcTime2.ToLocalTime(); // In privous versions of datetime this localtime  from utc conversion would magically make these times the same.
+           var localDateTime2 = utcTime2.ToLocalTime(); // In previous versions of datetime this localtime  from utc conversion would magically make these times the same.
            // This would mean loss of information as the time orginially set did not match. 
            Console.WriteLine(localDateTime1.Date.ToString() + localDateTime1.TimeOfDay);
            Console.WriteLine(localDateTime2.Date.ToString() + localDateTime2.TimeOfDay);
@@ -56,6 +56,10 @@ namespace Design_Patterns.TypeMeaningSingleResponsibility
            Assert.NotEqual(utcTime3, utcTime4);
            Assert.True(utcTime3.Kind == DateTimeKind.Utc);
            Assert.True(utcTime4.Kind == DateTimeKind.Utc);
+           // Creating types is relatively cheap. 
+           // It is generally betteer to have 2 types even when it feels as though they are similar and could be one. 
+           // This is especially good for open source projects. 
+           // IF YOU HAVE A TYPE THAT ONLY EVER MEANS ONE CONCEPT THEN IT IS EASIER TO USE THAT CONCEPT.
        }
 
     }
