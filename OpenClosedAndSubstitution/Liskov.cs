@@ -67,6 +67,8 @@ namespace Design_Patterns.OpenClosedAndSubstitution
             IList<string> strings = new string[5]; //arrays are fixed size in C#
             strings.Add("Hello"); //So this will fail. As Arrays are fixed size and a list are not fixed and can be added to.
             //In terms of Listov this type is broken. 
+
+            
         }
     }
 }
