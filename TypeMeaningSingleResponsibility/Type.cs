@@ -10,7 +10,7 @@ namespace Design_Patterns.TypeMeaningSingleResponsibility
         {
             DateTime date = DateTime.Today; // The datetime object can be used to return not just the date but also the time.
             date.AddHours(5); // An object should be focussed on data type. 
-            TimeSpan time = date.TimeOfDay; // This is the example as the TimeOfDay will return a TimeSpan object with the hours, minutes and secconds. 
+            var time = date.TimeOfDay; // This is the example as the TimeOfDay will return a TimeSpan object with the hours, minutes and secconds. 
             Assert.True(time is TimeSpan);
 
             //There is alot that goes into Date Time such divisions of time, time zones, quirks like daytime savings and so on.
