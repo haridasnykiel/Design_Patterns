@@ -5,7 +5,7 @@ using System;
 //Once the instance is created the name can be called by using the instance of ShyPerson.
 //The only issue is that there is now 3 lines of code for one property, which can make the code a bit busy 
 //which could make it less readable.
-//These classes are sealed which means no other class can inherit that class.
+//These classes are sealed which means no other class can inherit them.
 public sealed class ShyPerson 
 {
     private readonly string name;
