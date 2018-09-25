@@ -8,7 +8,7 @@ namespace Design_Patterns.Strategy_Pattern
 {
     public class StrategyPattern
     {
-        private static readonly ReadOnlyCollection<Person> people = new List<Person>
+        public static readonly ReadOnlyCollection<Person> people = new List<Person>
         {
             new Person {Name = "Harry", Age = 23 },
             new Person {Name = "Harry", Age = 5 },
@@ -33,7 +33,11 @@ namespace Design_Patterns.Strategy_Pattern
             }
 
         }
-
+        //None of these comparison methods know about sorting and the Sort() method does not know how to compare,
+        //except for when calling the comparison. You have a clean separation of concerns there. 
+        // Separate the concern of using the strategy and implementing it. 
+        //This goes back to the S in SOLID, enforcing single responsibility for more flexible code. 
+        // Linq is full of strategy patterns.
         static int CompareByAge(Person x, Person y)
         {
             return x.Age.CompareTo(y.Age);
