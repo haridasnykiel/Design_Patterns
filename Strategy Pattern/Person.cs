@@ -4,7 +4,7 @@ namespace Design_Patterns.Strategy_Pattern {
         public int Age { get; set; }
 
         public override string ToString () {
-            return string.Format ("{0} : {1}", Name, Age);
+            return string.Format ("{0} : {1} ", Name, Age);
         }
     }
 }

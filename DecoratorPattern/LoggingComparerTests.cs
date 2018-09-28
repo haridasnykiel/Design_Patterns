@@ -10,7 +10,10 @@ namespace Design_Patterns.DecoratorPattern {
         [Fact]
         public void LoggingComparerTest () {
             var persons = StrategyPattern.people.ToList ();
-            persons.Sort (new LoggingComparer<Person> (new AgeComparer ()));
+            persons.Sort (LoggingComparer.For (new AgeComparer ()));
+            foreach (var person in persons) {
+                Console.WriteLine (person);
+            }
         }
 
     }

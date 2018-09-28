@@ -16,4 +16,10 @@ namespace Design_Patterns.DecoratorPattern {
             return result;
         }
     }
+
+    public static class LoggingComparer {
+        public static IComparer<T> For<T> (IComparer<T> comparer) {
+            return new LoggingComparer<T> (comparer);
+        }
+    }
 }
