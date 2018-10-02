@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Design_Patterns.Strategy_Pattern;
 
 namespace Design_Patterns.DecoratorPattern {
     public sealed class LoggingComparer<T> : IComparer<T> {
@@ -11,8 +12,15 @@ namespace Design_Patterns.DecoratorPattern {
 
         public int Compare (T x, T y) {
             int result = _comparer.Compare (x, y);
-            string value = $"Compare({x},{y}) == {result}";
-            Console.WriteLine (value);
+            Console.WriteLine ($"Compare({x},{y}) == {result}");
+            return result;
+        }
+    }
+
+    public class InheritanceLoggingAgeComparer : AgeComparer {
+        public int Compare (Person x, Person y) {
+            int result = base.Compare (x, y);
+            Console.WriteLine ($"Compare({x},{y}) == {result}");
             return result;
         }
     }
