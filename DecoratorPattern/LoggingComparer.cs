@@ -18,7 +18,7 @@ namespace Design_Patterns.DecoratorPattern {
     }
 
     public class InheritanceLoggingAgeComparer : AgeComparer {
-        public int Compare (Person x, Person y) {
+        public override int Compare (Person x, Person y) {
             int result = base.Compare (x, y);
             Console.WriteLine ($"Compare({x},{y}) == {result}");
             return result;
