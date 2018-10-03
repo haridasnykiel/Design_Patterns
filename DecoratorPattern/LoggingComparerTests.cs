@@ -16,5 +16,14 @@ namespace Design_Patterns.DecoratorPattern {
             }
         }
 
+        [Fact]
+        public void ReversingComparerTest () {
+            var persons = StrategyPattern.people.ToList ();
+            persons.Sort (ReversingComparer.For (new AgeComparer ()));
+            foreach (var person in persons) {
+                Console.WriteLine (person);
+            }
+        }
+
     }
 }
