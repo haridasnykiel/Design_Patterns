@@ -39,7 +39,7 @@ namespace Design_Patterns.Strategy_Pattern {
     }
 
     public class AgeComparer : IComparer<Person> {
-        public virtual int Compare (Person x, Person y) {
+        public virtual int Compare (Person x, Person y) { //This only knows what to compare.
             return x.Age.CompareTo (y.Age);
         }
     }

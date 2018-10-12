@@ -40,9 +40,18 @@ namespace Design_Patterns.DecoratorPattern {
     //     }
     // }
 
+    //This is generally not such a good method of doing this.
+    //The issue is that you have had to make the method into
+    //a virtual method.
+    //It is very difficult to predict which method should be virtual.
+    //This can cause issues if someone overrides the method
+    //then there the method could conflict with the already existing
+    //method.
+    //This could cause lots of conflicts between methods.
+
     public static class ReversingComparer {
         public static IComparer<T> For<T> (IComparer<T> comparer) {
-            return new ReversingComparer<T> (comparer);
+            return new ReversingComparer<T> (comparer); // This type only knows about logging.
         }
     }
 
