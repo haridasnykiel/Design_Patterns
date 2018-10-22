@@ -4,8 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Xunit;
 
-namespace Design_Patterns.Strategy_Pattern {
-    public class StrategyPattern {
+namespace Design_Patterns.Strategy_Pattern
+{
+    public class StrategyPattern
+    {
         public static readonly ReadOnlyCollection<Person> people = new List<Person> {
             new Person { Name = "Harry", Age = 23 },
             new Person { Name = "Harry", Age = 5 },
@@ -13,18 +15,20 @@ namespace Design_Patterns.Strategy_Pattern {
             new Person { Name = "Jess", Age = 15 },
             new Person { Name = "John", Age = 32 },
             new Person { Name = "Smith", Age = 10 }
-        }.AsReadOnly ();
+        }.AsReadOnly();
 
         [Fact]
-        public void SortingByAge () {
-            var listOfpeople = people.ToList ();
+        public void SortingByAge()
+        {
+            var listOfpeople = people.ToList();
             //All of these comparison methods to the same thing they are just implemented in a different way.
-            listOfpeople.Sort (CompareByAge); // Here we are satisfying the delegate type. So we just implemented the delegate.   
-            listOfpeople.Sort ((x, y) => x.Age.CompareTo (y.Age)); // Here we are using a lambda expression.
-            listOfpeople.Sort (new AgeComparer ()); // Here we have implemented the Icomparer single method interface to do the same task.
-            Console.WriteLine ("People: " + listOfpeople.Count);
-            foreach (var item in listOfpeople) {
-                Console.WriteLine ("Person: " + item.Name + " " + item.Age);
+            listOfpeople.Sort(CompareByAge); // Here we are satisfying the delegate type. So we just implemented the delegate.   
+            listOfpeople.Sort((x, y) => x.Age.CompareTo(y.Age)); // Here we are using a lambda expression.
+            listOfpeople.Sort(new AgeComparer()); // Here we have implemented the Icomparer single method interface to do the same task.
+            Console.WriteLine("People: " + listOfpeople.Count);
+            foreach (var item in listOfpeople)
+            {
+                Console.WriteLine("Person: " + item.Name + " " + item.Age);
             }
 
         }
@@ -33,14 +37,17 @@ namespace Design_Patterns.Strategy_Pattern {
         // Separate the concern of using the strategy and implementing it. 
         //This goes back to the S in SOLID, enforcing single responsibility for more flexible code. 
         // Linq is full of strategy patterns.
-        static int CompareByAge (Person x, Person y) {
-            return x.Age.CompareTo (y.Age);
+        static int CompareByAge(Person x, Person y)
+        {
+            return x.Age.CompareTo(y.Age);
         }
     }
 
-    public class AgeComparer : IComparer<Person> {
-        public virtual int Compare (Person x, Person y) { //This only knows what to compare.
-            return x.Age.CompareTo (y.Age);
+    public class AgeComparer : IComparer<Person>
+    {
+        public int Compare(Person x, Person y)
+        { //This only knows what to compare.
+            return x.Age.CompareTo(y.Age);
         }
     }
 }
